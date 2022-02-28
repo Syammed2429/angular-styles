@@ -1,7 +1,9 @@
 <div>
     <h2>Styles Component</h2>
 <h3>Server Status</h3>
-<p >Server is {{serverStatus?'Online': 'Offline'}}</p>
-<p [ngStyle]="{background: getColor()}">Server Is {{serverOnline}}</p>
+<p >Server is {{serverOnline}}</p>
+<p [ngStyle]="{background: getColor()}"
+[ngClass]="{online: serverOnline === 'online'}"
+>Server Is {{serverOnline}}</p>
 <p></p>
 </div>
